@@ -1,358 +1,468 @@
-<!DOCTYPE HTML>
-<html lang="zh-CN">
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Will">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="记录与分享技术">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Will&#39;s Blog For Tech">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Will&#39;s Blog For Tech">
+<meta property="og:description" content="记录与分享技术">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Will">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
   
   <title>Will&#39;s Blog For Tech</title>
-  <meta name="author" content="Will">
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
-  <meta name="description" content="记录与分享技术">
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
 
   
-  <meta property="og:site_name" content="Will&#39;s Blog For Tech"/>
-
-  
-    <meta property="og:image" content=""/>
-  
-
-  <link rel="shortcut icon" href="/favicon.png">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  <!--[if lt IE 9]><script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script><![endif]-->
-  
-
 <meta name="generator" content="Hexo 6.2.0"></head>
 
 
 <body>
-  <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Will&#39;s Blog For Tech</a></h1>
-  <h2><a href="/">The Blog For Computer Science And Tech</a></h2>
-</div>
-<nav id="main-nav" class="alignright">
-  <ul>
+  
+
+  <header>
     
-      <li><a href="/null">Home</a></li>
-    
-      <li><a href="/archives">Archives</a></li>
-    
-  </ul>
-  <div class="clearfix"></div>
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
 </nav>
-<div class="clearfix"></div>
-</header>
-  <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-  <article id="post-object-storage-service" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time class="dt-published" datetime="2022-09-18T14:41:23.000Z"><a href="/2022/09/18/object-storage-service/">2022-09-18</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2022/09/18/object-storage-service/">对象存储基础</a></h1>
+
   
 
-    </header>
-    <div class="e-content entry" itemprop="articleBody">
-      
-        <h1 id="零"><a href="#零" class="headerlink" title="零"></a>零</h1><p>你是否有这样的疑问：</p>
-<ul>
-<li>什么是对象存储？ 对象存储 <strong>&#x3D;&#x3D;</strong> 云存储 ？</li>
-<li>对象存储到底存什么？有哪些特点？</li>
-<li>各大云厂商的对象存储，如：S3、OSS、OBS、COS， 到底用哪一家？</li>
-<li>等等</li>
-</ul>
-<p>面对各种关于对象存储的问题，本文试着用通熟易懂的话语，给大家分享一下，同时大家有任何问题和想法都可以一同探讨。</p>
-<h1 id="什么是对象存储"><a href="#什么是对象存储" class="headerlink" title="什么是对象存储"></a>什么是对象存储</h1><p>搜索引擎上一搜 <strong>对象存储</strong> ，一出来就是 <strong>某某厂商云存储</strong>，似乎对象存储与云存储划等号了。</p>
-<p>追根溯源各大厂商的对象存储，要回到AWS（亚马逊） S3 协议，其以一种简单的 REST API的方式对外提供可扩展、数据高可用、安全、和高性能的服务，除了数据读取服务外，还提供了很多高级特性，比如：生命周期管理、存储介质、对象锁、数据复制等（参考 <a target="_blank" rel="noopener" href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html">S3 协议</a>）基本各大厂商在S3的基础上，都发展各自的对象存储协议与特性，但是基本都会声称兼容 S3 协议。</p>
-<p>S3协议两个重要的概念就是 桶<code>Bucket</code> 和 对象<code>Object</code></p>
-<ul>
-<li>桶 是存储对象的容器，一个桶可以存放任意多个对象，在桶上有很多特性，如多版本、存储策略。</li>
-<li>对象 是一个基本的存储实体，对象中包含 数据 与 元数据，元数据中既有默认的原数据也有自定义的元数据，自定义元数据可通过 HTTP 的 HEADER 传入。</li>
-</ul>
-<p>快速入门的一组操作实例：</p>
-<ol>
-<li>创建桶</li>
-<li>上传对象</li>
-<li>下载对象</li>
-<li>删除对象和桶</li>
-</ol>
-<h2 id="文件存储-amp-块存储-amp-对象存储"><a href="#文件存储-amp-块存储-amp-对象存储" class="headerlink" title="文件存储 &amp; 块存储 &amp; 对象存储"></a>文件存储 &amp; 块存储 &amp; 对象存储</h2><p>横行与其他存储协议对比，在云上有什么区别。</p>
-<table>
-<thead>
-<tr>
-<th>对比维度</th>
-<th>文件</th>
-<th>块</th>
-<th>对象</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>概述</td>
-<td>可以为多个云服务器提供共享访问，类似于Windows、linux远程目录</td>
-<td>为云服务器提供可弹性扩展的云硬盘</td>
-<td>提供海量的、安全的、高可高、低成本的数据存储能力。</td>
-</tr>
-<tr>
-<td>协议</td>
-<td>NAS、NFS</td>
-<td>SAN，iscsi</td>
-<td>S3、HTTPS</td>
-</tr>
-<tr>
-<td>数据访问</td>
-<td>挂载到服务器上，通过NFS协议访问</td>
-<td>挂载在服务器上使用，通过iscsi协议访问</td>
-<td>直接使用 HTTP&#x2F;HTTPS访问</td>
-</tr>
-<tr>
-<td>数据组织形式</td>
-<td>文件系统方式，分层整理</td>
-<td>数据块的形式</td>
-<td>直接存放文件</td>
-</tr>
-<tr>
-<td>应用场景</td>
-<td>文件共享、</td>
-<td>云硬盘</td>
-<td>海量文件存储、大数据分析</td>
-</tr>
-</tbody></table>
-<h1 id="国内外厂商"><a href="#国内外厂商" class="headerlink" title="国内外厂商"></a>国内外厂商</h1><p>列举三个国内外成熟的厂商，对比其目前功能场景以及未来发力点。</p>
-<h2 id="AWS-S3"><a href="#AWS-S3" class="headerlink" title="AWS S3"></a><a target="_blank" rel="noopener" href="https://aws.amazon.com/cn/s3/?nc=sn&loc=1#">AWS S3</a></h2><p>鼻祖、不断挖掘数据价值。<br>主要特点：</p>
-<ul>
-<li>高可扩展</li>
-<li>低成本，多种存储介质</li>
-<li>安全性高、合规</li>
-<li>强大的访问控制</li>
-<li><strong>数据湖，可以从任何地方获取任何量级数据进行存储，并做大数据分析</strong></li>
-<li><strong>复制功能备份和还原关键数据</strong></li>
-<li><strong>构建快速、功能强大的移动和基于 Web 的云原生应用程序，可在高度可用的配置中自动扩展。</strong>（理解一下，S3为云原生应用程序提供共享的存储环境，使其快速发布）</li>
-</ul>
-<h2 id="aliyun-OSS"><a href="#aliyun-OSS" class="headerlink" title="aliyun OSS"></a><a target="_blank" rel="noopener" href="https://www.aliyun.com/product/oss">aliyun OSS</a></h2><p>国内做的最早的一批厂商<br>主要特点：</p>
-<ul>
-<li>海量、安全、低成本、高可靠</li>
-<li>安全合规</li>
-<li><strong>数据迁移，帮助企业快速上云、以及从其他厂商迁移数据</strong></li>
-<li><strong>支持图片、文档、视频、CSV等数据的常用处理和分析能力</strong>，这单很赞、充分利用自身算法优势，提供图片处理、人脸识别能力</li>
-<li><strong>容灾备份</strong> 通过数据跨区域复制以及同城冗余、版本控制等技术，保障数据的高可靠性。</li>
-<li><strong>数据糊</strong></li>
-</ul>
-<h2 id="华为云-OBS"><a href="#华为云-OBS" class="headerlink" title="华为云 OBS"></a><a target="_blank" rel="noopener" href="https://www.huaweicloud.com/product/obs.html">华为云 OBS</a></h2><p>主要特点：</p>
-<ul>
-<li>海量、安全、高可靠、低成本</li>
-<li>安全可信</li>
-<li><strong>超高性能，千万级TPS、2.4GB&#x2F;s单流上传速度</strong>，感觉只有在私有云场景下，单流上传速度才有意义，共有云场景下，上传速度受限因素太多。</li>
-<li><strong>多协议</strong>，支持兼容对象和POSIX协议。对象存储前面架一个文件网关，然后文件网关支持POSIX协议。这样做的好处是，可以从文件协议写入，然后对象协议读取数据，便于数据流动，在数据湖场景下，可以减少存储成本。</li>
-<li><strong>并行文件系统</strong>，提供一个高性能的文件系统，这个很赞。</li>
-</ul>
-<p>综上，从以上三个厂商的对象存储能力来看，都在完善基本能力的基础上，各自在自己擅长的领域发力，提供更优质的服务和能力。亚马逊在数据糊、云原生方面有更多亮点、阿里在AI、数据迁移上做的更好、华为在多协议互通、单机性能上更胜一筹。</p>
-<p>因此对普通企业&#x2F;个人用户来说，喜欢哪一家就用哪一家。</p>
-<h1 id="开源世界"><a href="#开源世界" class="headerlink" title="开源世界"></a>开源世界</h1><p>聊完云厂商，再聊聊开源世界的对象存储，那肯定是大名鼎鼎的 <a target="_blank" rel="noopener" href="https://github.com/ceph/ceph">Ceph</a>、<a target="_blank" rel="noopener" href="https://github.com/minio/minio">Minio</a></p>
-<h2 id="Ceph"><a href="#Ceph" class="headerlink" title="Ceph"></a><a target="_blank" rel="noopener" href="https://ceph.com/en/discover/">Ceph</a></h2><p>据说很多厂商的对象存储都是基于 ceph 基础之上的， 其显著特点是：同时支持 对象、文件、块存储三种协议，其主要是将三种协议最终收敛到平台 <code>RADOS</code> (Reliable Autonomic Distributed Object Store)<br><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ad8a00b875b5483a80d6b4c102e6a849~tplv-k3u1fbpfcp-watermark.image" alt="image.png"></p>
-<h2 id="Minio"><a href="#Minio" class="headerlink" title="Minio"></a><a target="_blank" rel="noopener" href="https://min.io/">Minio</a></h2><p>go语言编写，支持容器部署，天生适用于云原生，其显著特点是：</p>
-<ul>
-<li>双活复制（Active-Active Replication）, 两端都可以同时对外提供服务，并将数据复制到对端。</li>
-<li>数据加密</li>
-<li>底层数据使用 <strong>纠删码（Erasure Code）</strong>，而不是多副本模式，减少存储空间。</li>
-</ul>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>对象存储不同于原有的存储（只在专网、私有云中提供存储服务），其可在互联网中对外提供海量的、低成本的、安全可靠的存储服务，让更多的企业&#x2F;个人可以使用，相信未来其功能特性与使用场景将不断的扩大。</p>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
-<li><a target="_blank" rel="noopener" href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html">S3 协议</a></li>
-<li><a target="_blank" rel="noopener" href="https://aws.amazon.com/cn/s3/?nc=sn&loc=1#">AWS S3</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.aliyun.com/product/oss">aliyun OSS</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.huaweicloud.com/product/obs.html">华为云 OBS</a></li>
-<li><a target="_blank" rel="noopener" href="https://ceph.com/en/discover/">Ceph</a></li>
-<li><a target="_blank" rel="noopener" href="https://min.io/">Minio</a></li>
-</ul>
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Will&#39;s Blog For Tech"></span>
+          
+        </div>
 
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
       
     </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
   </div>
-</article>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
 
 
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/09/18/object-storage-service/" target="_self">
+          对象存储基础
+        </a>
+      </h1>
 
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/09/18/object-storage-service/" target="_self">
+        <div>
+          你是否有这样的疑问：什么是对象存储？ 对象存储 **==** 云存储 ？对象存储到底存什么？有哪些特点？各大云厂商的对象存储，如：S3、OSS、OBS、COS， 到底用哪一家？
+        </div>
+      </a>
 
-  <article id="post-Getting-Start-For-Hexo-And-Github-Page" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-09-18 22:41" pubdate>
+              2022-09-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
   
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time class="dt-published" datetime="2022-06-19T12:24:18.000Z"><a href="/2022/06/19/Getting-Start-For-Hexo-And-Github-Page/">2022-06-19</a></time>
-      
-      
   
-    <h1 class="title"><a href="/2022/06/19/Getting-Start-For-Hexo-And-Github-Page/">Getting Start For Hexo And Github Page</a></h1>
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97-%E5%AD%98%E5%82%A8/" class="category-chain-item">云计算&amp;存储</a>
+  
   
 
-    </header>
-    <div class="e-content entry" itemprop="articleBody">
-      
-        <p>从零开始搭建个人技术博客，用于记录与分享。</p>
-<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>所需技能：</p>
-<ul>
-<li><p><a target="_blank" rel="noopener" href="http://nodejs.cn/">node.js</a>：目前的版本数 <code>v16</code>，本次用于安装hexo。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://git-scm.com/">git</a>：版本管理工具，本次用于上传代码到github。</p>
-</li>
-</ul>
-<p>有了以上两个工具，再加上掌握markdown写作语法，就可以开始搭建并写作了。</p>
-<h2 id="Hexo-第一篇文章"><a href="#Hexo-第一篇文章" class="headerlink" title="Hexo 第一篇文章"></a>Hexo 第一篇文章</h2><h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><ol>
-<li>使用 npm 命令安装 Hexo</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+      </span>
+    
+  
+</span>
 
-<ol start="2">
-<li>安装完后，使用 hexo 命令建立博客，可以指定文件夹。</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line"><span class="built_in">cd</span> &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>执行以下命令，本地部署，</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>启动后访问 <code>http://localhost:4000</code>，效果如下：<br><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2f801a1c96d84a9cac03b7d301f68a1d~tplv-k3u1fbpfcp-watermark.image" alt="image.png"></p>
-<h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><p>新建文章之前，修改 <code>_config.xml</code>中的配置，修改创建文章的名称，增加年月日标识。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new_post_name: :year-:month-:day-:title.md</span><br></pre></td></tr></table></figure>
-<p>新建文章</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;Getting Start For Hexo And Github Page&quot;</span></span><br></pre></td></tr></table></figure>
-<p>会在<code>source/_posts</code>中新创建一个名为 “2022-06-19-Getting-Start-For-Hexo-And-Github-Page.md”的文件，编辑即可写文章。</p>
-<h2 id="Gitbub-Pages-部署"><a href="#Gitbub-Pages-部署" class="headerlink" title="Gitbub Pages 部署"></a>Gitbub Pages 部署</h2><p>使用Github Action 做自动化部署。</p>
-<ol>
-<li>在Github中创建一个公开仓库，根据自己的 <strong>username</strong> 命名，格式为 <strong><em>username</em>.github.io</strong></li>
-<li>将上一个段落创建的 hexo 目录推送到仓库中，分支为默认分支 <strong>main</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git remote add origin xxx</span><br><span class="line">git checkout main</span><br><span class="line">git add .</span><br><span class="line">git commit -am <span class="string">&quot;init hexo&quot;</span></span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>在目录下创建文件 <code>.github/workflows/pages.yml</code>，然后填入以下内容</li>
-</ol>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Pages</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">main</span>  <span class="comment"># default branch</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">pages:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">submodules:</span> <span class="literal">true</span>        <span class="comment"># 拉取submodule模块</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span> <span class="number">16.</span><span class="string">x</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">&#x27;16&#x27;</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Cache</span> <span class="string">NPM</span> <span class="string">dependencies</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/cache@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">node_modules</span></span><br><span class="line">          <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">runner.OS</span> <span class="string">&#125;&#125;-npm-cache</span></span><br><span class="line">          <span class="attr">restore-keys:</span> <span class="string">|</span></span><br><span class="line"><span class="string">            $&#123;&#123; runner.OS &#125;&#125;-npm-cache</span></span><br><span class="line"><span class="string"></span>      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">Dependencies</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">install</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Build</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">build</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">github_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">publish_dir:</span> <span class="string">./public</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>保存，将以上内容推送到仓库中，当部署完成后，生成的页面会在<code>gh-pages</code>分支中。</p>
-<ol start="4">
-<li>修改Github Pages配置，在 Github 仓库的 <strong>Settings</strong> &gt; <strong>Pages</strong> &gt; <strong>Source</strong>中，修改分支为<code>gh-pages</code></li>
-<li>在 <strong>Actions</strong> 中检查是否部署成功<br><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8ea533fc39e2481e9a4b7908cbfee5bb~tplv-k3u1fbpfcp-watermark.image" alt="image.png"><br>部署成功后，访问网页 <em>username</em>.github.io</li>
-</ol>
-<h2 id="踩到的坑"><a href="#踩到的坑" class="headerlink" title="踩到的坑"></a>踩到的坑</h2><h3 id="Github中的持续集成，没有使用-Travis-CI，使用Github-Action"><a href="#Github中的持续集成，没有使用-Travis-CI，使用Github-Action" class="headerlink" title="Github中的持续集成，没有使用 Travis CI，使用Github Action"></a>Github中的持续集成，没有使用 Travis CI，使用Github Action</h3><p>由于<a target="_blank" rel="noopener" href="https://travis-ci.com/">Travis CI</a>目前已全面收费，新用户只能免费使用30天，如果使用Travis CI需要认证用户信息，并购买服务后才能使用。<br>Github Actions是Github的免费持续集成工具，符合当前建站要求。</p>
-<p>因此最新版本的hexo建站，可以使用 Github Action。</p>
-<h3 id="部署成功后，访问页面内容为空"><a href="#部署成功后，访问页面内容为空" class="headerlink" title="部署成功后，访问页面内容为空"></a>部署成功后，访问页面内容为空</h3><p><strong>现象：</strong></p>
-<ol>
-<li>页面访问成功，但是页面为空。不显示文章。</li>
-<li>查看Github Actions的运用的 <code>build</code> 任务时，出现WARN日志。</li>
-</ol>
-<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fa5268773cb64f3ea9556ddd95834856~tplv-k3u1fbpfcp-watermark.image" alt="image.png"></p>
-<p><strong>原因：</strong><br>在持续集成的时候，拉取仓库代码后，没有拉去到对应的 submodule 的代码，导致 theme 主题下的目录为空。在后面执行<code>hexo generate</code>的时候，生成的 index.html 页面文件都是空的。</p>
-<p><strong>解决办法</strong>：<br>在 <code>pages.yml</code> 中，第一步 <code>checkout</code>增加配置 <code>submodules: true </code> 用于拉去submodule的源代码。</p>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
-<li>hexo <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">中文</a>、<a target="_blank" rel="noopener" href="https://hexo.io/docs/index.html">英文</a>： 推荐看英文，中文翻译比较老旧。</li>
-<li>Github Actions <a target="_blank" rel="noopener" href="https://docs.github.com/cn/actions/learn-github-actions/understanding-github-actions">中文</a>：对 Actions 有个初步的了解。</li>
-</ul>
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%9F%BA%E7%A1%80/">#基础</a>
+            
+              <a href="/tags/%E4%BA%91%E5%AD%98%E5%82%A8/">#云存储</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/06/19/Getting-Start-For-Hexo-And-Github-Page/" target="_self">
+          Getting Start For Hexo And Github Page
+        </a>
+      </h1>
 
       
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/06/19/Getting-Start-For-Hexo-And-Github-Page/" target="_self">
+        <div>
+          从零开始搭建个人技术博客，用于记录与分享。
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-06-19 20:24" pubdate>
+              2022-06-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%9F%BA%E7%A1%80/" class="category-chain-item">基础</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%9F%BA%E7%A1%80/">#基础</a>
+            
+              <a href="/tags/Hexo/">#Hexo</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
     </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
   </div>
-</article>
-
-
-
-
-
-<nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
-</nav></div></div>
-    <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="搜索">
-    <input type="hidden" name="as_sitesearch" value="example.com">
-  </form>
 </div>
 
+    
 
-  
-<div class="widget tag">
-  <h3 class="title">分类</h3>
-  <ul class="entry">
-  
-    <li><a href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97-%E5%AD%98%E5%82%A8/">云计算&amp;存储</a><small>1</small></li>
-  
-    <li><a href="/categories/%E5%9F%BA%E7%A1%80/">基础</a><small>1</small></li>
-  
-  </ul>
-</div>
+    
+  </main>
 
-
+  <footer>
+    <div class="footer-inner">
   
-<div class="widget tag">
-  <h3 class="title">标签</h3>
-  <ul class="entry">
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
   
-    <li><a href="/tags/Hexo/">Hexo</a><small>1</small></li>
   
-    <li><a href="/tags/%E4%BA%91%E5%AD%98%E5%82%A8/">云存储</a><small>1</small></li>
   
-    <li><a href="/tags/%E5%9F%BA%E7%A1%80/">基础</a><small>2</small></li>
-  
-  </ul>
-</div>
-
-</aside>
-    <div class="clearfix"></div>
-  </div>
-  <footer id="footer" class="inner"><div class="alignleft">
-  
-  &copy; 2022 Will
   
 </div>
-<div class="clearfix"></div></footer>
+
+  </footer>
+
+  <!-- Scripts -->
   
-<script src="/js/jquery-3.4.1.min.js"></script>
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
 
 
-<script src="/js/jquery.imagesloaded.min.js"></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
 
 
-<script src="/js/gallery.js"></script>
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
 
 
 
 
 
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
 
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
+  
 
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-<script>
-(function($){
-  $('.fancybox').fancybox();
-})(jQuery);
-</script>
-
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>
