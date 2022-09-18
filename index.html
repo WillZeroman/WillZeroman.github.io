@@ -47,6 +47,148 @@
 </header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
+  <article id="post-object-storage-service" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time class="dt-published" datetime="2022-09-18T14:41:23.000Z"><a href="/2022/09/18/object-storage-service/">2022-09-18</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2022/09/18/object-storage-service/">对象存储基础</a></h1>
+  
+
+    </header>
+    <div class="e-content entry" itemprop="articleBody">
+      
+        <h1 id="零"><a href="#零" class="headerlink" title="零"></a>零</h1><p>你是否有这样的疑问：</p>
+<ul>
+<li>什么是对象存储？ 对象存储 <strong>&#x3D;&#x3D;</strong> 云存储 ？</li>
+<li>对象存储到底存什么？有哪些特点？</li>
+<li>各大云厂商的对象存储，如：S3、OSS、OBS、COS， 到底用哪一家？</li>
+<li>等等</li>
+</ul>
+<p>面对各种关于对象存储的问题，本文试着用通熟易懂的话语，给大家分享一下，同时大家有任何问题和想法都可以一同探讨。</p>
+<h1 id="什么是对象存储"><a href="#什么是对象存储" class="headerlink" title="什么是对象存储"></a>什么是对象存储</h1><p>搜索引擎上一搜 <strong>对象存储</strong> ，一出来就是 <strong>某某厂商云存储</strong>，似乎对象存储与云存储划等号了。</p>
+<p>追根溯源各大厂商的对象存储，要回到AWS（亚马逊） S3 协议，其以一种简单的 REST API的方式对外提供可扩展、数据高可用、安全、和高性能的服务，除了数据读取服务外，还提供了很多高级特性，比如：生命周期管理、存储介质、对象锁、数据复制等（参考 <a target="_blank" rel="noopener" href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html">S3 协议</a>）基本各大厂商在S3的基础上，都发展各自的对象存储协议与特性，但是基本都会声称兼容 S3 协议。</p>
+<p>S3协议两个重要的概念就是 桶<code>Bucket</code> 和 对象<code>Object</code></p>
+<ul>
+<li>桶 是存储对象的容器，一个桶可以存放任意多个对象，在桶上有很多特性，如多版本、存储策略。</li>
+<li>对象 是一个基本的存储实体，对象中包含 数据 与 元数据，元数据中既有默认的原数据也有自定义的元数据，自定义元数据可通过 HTTP 的 HEADER 传入。</li>
+</ul>
+<p>快速入门的一组操作实例：</p>
+<ol>
+<li>创建桶</li>
+<li>上传对象</li>
+<li>下载对象</li>
+<li>删除对象和桶</li>
+</ol>
+<h2 id="文件存储-amp-块存储-amp-对象存储"><a href="#文件存储-amp-块存储-amp-对象存储" class="headerlink" title="文件存储 &amp; 块存储 &amp; 对象存储"></a>文件存储 &amp; 块存储 &amp; 对象存储</h2><p>横行与其他存储协议对比，在云上有什么区别。</p>
+<table>
+<thead>
+<tr>
+<th>对比维度</th>
+<th>文件</th>
+<th>块</th>
+<th>对象</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>概述</td>
+<td>可以为多个云服务器提供共享访问，类似于Windows、linux远程目录</td>
+<td>为云服务器提供可弹性扩展的云硬盘</td>
+<td>提供海量的、安全的、高可高、低成本的数据存储能力。</td>
+</tr>
+<tr>
+<td>协议</td>
+<td>NAS、NFS</td>
+<td>SAN，iscsi</td>
+<td>S3、HTTPS</td>
+</tr>
+<tr>
+<td>数据访问</td>
+<td>挂载到服务器上，通过NFS协议访问</td>
+<td>挂载在服务器上使用，通过iscsi协议访问</td>
+<td>直接使用 HTTP&#x2F;HTTPS访问</td>
+</tr>
+<tr>
+<td>数据组织形式</td>
+<td>文件系统方式，分层整理</td>
+<td>数据块的形式</td>
+<td>直接存放文件</td>
+</tr>
+<tr>
+<td>应用场景</td>
+<td>文件共享、</td>
+<td>云硬盘</td>
+<td>海量文件存储、大数据分析</td>
+</tr>
+</tbody></table>
+<h1 id="国内外厂商"><a href="#国内外厂商" class="headerlink" title="国内外厂商"></a>国内外厂商</h1><p>列举三个国内外成熟的厂商，对比其目前功能场景以及未来发力点。</p>
+<h2 id="AWS-S3"><a href="#AWS-S3" class="headerlink" title="AWS S3"></a><a target="_blank" rel="noopener" href="https://aws.amazon.com/cn/s3/?nc=sn&loc=1#">AWS S3</a></h2><p>鼻祖、不断挖掘数据价值。<br>主要特点：</p>
+<ul>
+<li>高可扩展</li>
+<li>低成本，多种存储介质</li>
+<li>安全性高、合规</li>
+<li>强大的访问控制</li>
+<li><strong>数据湖，可以从任何地方获取任何量级数据进行存储，并做大数据分析</strong></li>
+<li><strong>复制功能备份和还原关键数据</strong></li>
+<li><strong>构建快速、功能强大的移动和基于 Web 的云原生应用程序，可在高度可用的配置中自动扩展。</strong>（理解一下，S3为云原生应用程序提供共享的存储环境，使其快速发布）</li>
+</ul>
+<h2 id="aliyun-OSS"><a href="#aliyun-OSS" class="headerlink" title="aliyun OSS"></a><a target="_blank" rel="noopener" href="https://www.aliyun.com/product/oss">aliyun OSS</a></h2><p>国内做的最早的一批厂商<br>主要特点：</p>
+<ul>
+<li>海量、安全、低成本、高可靠</li>
+<li>安全合规</li>
+<li><strong>数据迁移，帮助企业快速上云、以及从其他厂商迁移数据</strong></li>
+<li><strong>支持图片、文档、视频、CSV等数据的常用处理和分析能力</strong>，这单很赞、充分利用自身算法优势，提供图片处理、人脸识别能力</li>
+<li><strong>容灾备份</strong> 通过数据跨区域复制以及同城冗余、版本控制等技术，保障数据的高可靠性。</li>
+<li><strong>数据糊</strong></li>
+</ul>
+<h2 id="华为云-OBS"><a href="#华为云-OBS" class="headerlink" title="华为云 OBS"></a><a target="_blank" rel="noopener" href="https://www.huaweicloud.com/product/obs.html">华为云 OBS</a></h2><p>主要特点：</p>
+<ul>
+<li>海量、安全、高可靠、低成本</li>
+<li>安全可信</li>
+<li><strong>超高性能，千万级TPS、2.4GB&#x2F;s单流上传速度</strong>，感觉只有在私有云场景下，单流上传速度才有意义，共有云场景下，上传速度受限因素太多。</li>
+<li><strong>多协议</strong>，支持兼容对象和POSIX协议。对象存储前面架一个文件网关，然后文件网关支持POSIX协议。这样做的好处是，可以从文件协议写入，然后对象协议读取数据，便于数据流动，在数据湖场景下，可以减少存储成本。</li>
+<li><strong>并行文件系统</strong>，提供一个高性能的文件系统，这个很赞。</li>
+</ul>
+<p>综上，从以上三个厂商的对象存储能力来看，都在完善基本能力的基础上，各自在自己擅长的领域发力，提供更优质的服务和能力。亚马逊在数据糊、云原生方面有更多亮点、阿里在AI、数据迁移上做的更好、华为在多协议互通、单机性能上更胜一筹。</p>
+<p>因此对普通企业&#x2F;个人用户来说，喜欢哪一家就用哪一家。</p>
+<h1 id="开源世界"><a href="#开源世界" class="headerlink" title="开源世界"></a>开源世界</h1><p>聊完云厂商，再聊聊开源世界的对象存储，那肯定是大名鼎鼎的 <a target="_blank" rel="noopener" href="https://github.com/ceph/ceph">Ceph</a>、<a target="_blank" rel="noopener" href="https://github.com/minio/minio">Minio</a></p>
+<h2 id="Ceph"><a href="#Ceph" class="headerlink" title="Ceph"></a><a target="_blank" rel="noopener" href="https://ceph.com/en/discover/">Ceph</a></h2><p>据说很多厂商的对象存储都是基于 ceph 基础之上的， 其显著特点是：同时支持 对象、文件、块存储三种协议，其主要是将三种协议最终收敛到平台 <code>RADOS</code> (Reliable Autonomic Distributed Object Store)<br><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ad8a00b875b5483a80d6b4c102e6a849~tplv-k3u1fbpfcp-watermark.image" alt="image.png"></p>
+<h2 id="Minio"><a href="#Minio" class="headerlink" title="Minio"></a><a target="_blank" rel="noopener" href="https://min.io/">Minio</a></h2><p>go语言编写，支持容器部署，天生适用于云原生，其显著特点是：</p>
+<ul>
+<li>双活复制（Active-Active Replication）, 两端都可以同时对外提供服务，并将数据复制到对端。</li>
+<li>数据加密</li>
+<li>底层数据使用 <strong>纠删码（Erasure Code）</strong>，而不是多副本模式，减少存储空间。</li>
+</ul>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>对象存储不同于原有的存储（只在专网、私有云中提供存储服务），其可在互联网中对外提供海量的、低成本的、安全可靠的存储服务，让更多的企业&#x2F;个人可以使用，相信未来其功能特性与使用场景将不断的扩大。</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html">S3 协议</a></li>
+<li><a target="_blank" rel="noopener" href="https://aws.amazon.com/cn/s3/?nc=sn&loc=1#">AWS S3</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.aliyun.com/product/oss">aliyun OSS</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.huaweicloud.com/product/obs.html">华为云 OBS</a></li>
+<li><a target="_blank" rel="noopener" href="https://ceph.com/en/discover/">Ceph</a></li>
+<li><a target="_blank" rel="noopener" href="https://min.io/">Minio</a></li>
+</ul>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+
   <article id="post-Getting-Start-For-Hexo-And-Github-Page" class="h-entry post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   
   <div class="post-content">
@@ -156,6 +298,8 @@
   <h3 class="title">分类</h3>
   <ul class="entry">
   
+    <li><a href="/categories/%E4%BA%91%E8%AE%A1%E7%AE%97-%E5%AD%98%E5%82%A8/">云计算&amp;存储</a><small>1</small></li>
+  
     <li><a href="/categories/%E5%9F%BA%E7%A1%80/">基础</a><small>1</small></li>
   
   </ul>
@@ -169,7 +313,9 @@
   
     <li><a href="/tags/Hexo/">Hexo</a><small>1</small></li>
   
-    <li><a href="/tags/%E5%9F%BA%E7%A1%80/">基础</a><small>1</small></li>
+    <li><a href="/tags/%E4%BA%91%E5%AD%98%E5%82%A8/">云存储</a><small>1</small></li>
+  
+    <li><a href="/tags/%E5%9F%BA%E7%A1%80/">基础</a><small>2</small></li>
   
   </ul>
 </div>
